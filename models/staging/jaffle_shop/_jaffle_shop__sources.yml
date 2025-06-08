@@ -2,19 +2,22 @@ version: 2
 
 sources:
     - name: jaffle_shop
-      description: This is a replica of the Postgres database used by our app
+      description: a clone of a Postgres application database
       database: chipmunk_raw
       schema: jaffle_shop
 
       tables:
           - name: customers
+            description: raw customers data
             columns:
               - name: id
+                description: primary key for customers data
                 tests:
                   - unique
                   - not_null
                 
           - name: orders
+            description: raw orders data
             loaded_at_field: _etl_loaded_at
             freshness: 
               warn_after: {count: 7, period: day}
