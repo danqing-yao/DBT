@@ -1,0 +1,23 @@
+version: 2
+sources:
+  - name: dbt_Group_4_raw
+    description: "a clone of a snowflake application DB"
+    database: Group_4_DB
+    schema: dbt_Group_4_raw
+    tables:
+      - name: HOUSING_CSV_RAW
+        description: "Raw housing data from CSV file format uploads."
+      - name: QOL_JSON_RAW
+        description: "Raw quality of living data from json file format uploads."
+      - name: MARKETPLACE_INCOME_RAW
+        description: "Raw american household income data from snowflake marketplace uploads."
+        
+
+
+
+
+
+
+
+
+
